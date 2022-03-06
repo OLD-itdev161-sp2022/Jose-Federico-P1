@@ -1,0 +1,63 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Pointless Quotes App</title>
+</head>
+
+<body>
+    <h1 data-position="header">Want to feel strange or share a thought?</h1>
+
+    <section data-position="add-quote">
+      <h2>Add quote</h2>
+
+      <form action="/quotes" method="POST">
+        <input type="text" placeholder="name" name="name" />
+        <input type="text" placeholder="quote" name="quote" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section data-position="update-quote">
+      <div>
+        <h2>Want to know my favorite quote?</h2>
+        <p>
+          Add my favorite quote to the list!
+        </p>
+        <button id="update-button">Add my quote</button>
+      </div>
+    </section>
+
+    <section data-position="delete-quote">
+      <div>
+        <h2>Didn't like it?</h2>
+        <p>
+          Delete my favorite quote. Does nothing if my quote isn't on the list!
+        </p>
+        <button id="delete-button">Delete my quote</button>
+      </div>
+      <div id="message"></div>
+    </section>
+
+    <section data-position="quotes">
+      <h2>Quotes</h2>
+
+      <ul class="quotes">
+        <% for(var i = 0; i < quotes.length; i++) {%>
+        <li class="quote">
+          <span><%= quotes[i].name %></span>:
+          <span><%= quotes[i].quote %></span>
+        </li>
+        <% } %>
+      </ul>
+    </section>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>
