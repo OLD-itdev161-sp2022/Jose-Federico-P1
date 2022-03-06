@@ -1,0 +1,28 @@
+{
+  "name": "jose-federico-p1",
+  "version": "1.0.0",
+  "description": "Project 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itdev161-sp2022/Jose-Federico-P1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itdev161-sp2022/Jose-Federico-P1/issues"
+  },
+  "homepage": "https://github.com/itdev161-sp2022/Jose-Federico-P1#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
